@@ -1,6 +1,6 @@
 #include "Password.h"
 #include <string>
-
+#include <vector>
 using std::string;
 
 /*
@@ -26,4 +26,14 @@ int Password::count_leading_characters(string phrase){
 */
 bool Password::has_mixed_case(string pass){
   return false;
+}
+/* Receives a string and returns a count of how many case-sensitive unique characters there are. 
+If there are duplicate instances of the same character it should only count as a single character.
+ Even if characters look similar, as long as they have distinct ASCII values, they should qualify as unique characters. */
+
+int Password::unique_characters(string in){
+  vector<char> ulist;
+  for(int i = 0, i< in.length(), i++){
+    
+  }
 }
