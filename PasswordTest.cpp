@@ -21,26 +21,24 @@ TEST(PasswordTest, single_letter_password)
 	ASSERT_EQ(1, actual);
 }
 
-TEST(pass, multi_letter_pass)
-{
-	Password myPass;
-	ASSert_EQ(5, my_password.count_leading_characters("ZZZZZB"));
+TEST(PasswordTest, multi_letter_pass) {
+    Password my_password;
+    ASSERT_EQ(5, my_password.count_leading_characters("ZZZZZB"));
 }
 
-TEST(pass, case_letter_pass)
-{
-	Password myPass;
-	ASSert_EQ(false, my_password.count_leading_characters("Zz"));
+TEST(PasswordTest, case_letter_pass) {
+    Password my_password;
+    ASSERT_EQ(1, my_password.count_leading_characters("Zz"));
 }
 
-TEST(pass, null_letter_pass)
-{
-	Password myPass;
-	ASSert_EQ(null, my_password.count_leading_characters(""));
+TEST(PasswordTest, empty_string) {
+    Password my_password;
+    ASSERT_EQ(0, my_password.count_leading_characters(""));
 }
+
 
 TEST(pass, twopat_letter_pass)
 {
 	Password myPass;
-	ASSert_EQ(2, my_password.count_leading_characters("zzdz"));
+	ASSERT_EQ(2, myPass.count_leading_characters("zzdz"));
 }

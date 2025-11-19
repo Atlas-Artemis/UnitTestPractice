@@ -2,7 +2,7 @@
 #include <string>
 #include <vector>
 using std::string;
-
+using std::vector;
 /*
   The function receives a string counts how many times the same character 
   occurs at the beginning of the string, before any other characters (or the
@@ -33,7 +33,18 @@ If there are duplicate instances of the same character it should only count as a
 
 int Password::unique_characters(string in){
   vector<char> ulist;
-  for(int i = 0, i< in.length(), i++){
-    
-  }
+  for (char c : in) {
+        bool found = false;
+        for (char u : ulist) {
+            if (u == c) {
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            ulist.push_back(c);
+        }
+    }
+
+    return ulist.size();
 }
