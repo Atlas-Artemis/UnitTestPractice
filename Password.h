@@ -1,9 +1,7 @@
-#ifndef PRACTICE_H
-#define PRACTICE_H
+#ifndef PASSWORD_H
+#define PASSWORD_H
 
 #include <string>
-
-using std::string;
 
 class Password
 {
@@ -14,13 +12,18 @@ public:
   end of the string). The function is case-sensitive so 'Z' is different than
   'z' and any ASCII characters are allowed.
   */
-  int count_leading_characters(string word);
+  int count_leading_characters(std::string word);
 
   /*
   receives a string and returns whether it has both at least one upper-case
   letter and at least one lower-case letter
   */
-  bool has_mixed_case(string);
-  int unique_characters(string);
+  bool has_mixed_case(std::string pass);
+
+  /*
+    Returns how many case-sensitive unique characters there are in the string.
+  */
+  int unique_characters(std::string in);
 };
+
 #endif
