@@ -10,6 +10,9 @@ using std::vector;
   'z' and any ASCII characters are allowed.
 */
 int Password::count_leading_characters(std::string phrase){
+    if (phrase.empty()) {
+    return 0;
+  }
   int repetition = 1;
   int index = 0;
   while( index < static_cast<int>(phrase.length()) - 1 && phrase[index] == phrase[index+1] ){
